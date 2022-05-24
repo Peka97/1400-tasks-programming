@@ -126,4 +126,175 @@
 # 		else:
 # 			print(1)
 
-# Task 71.
+# Task 71. Skip
+
+# # Task 72.
+# for num in range(1, 101):
+# 	print(num)
+# 	enter = input("What you say? (F)izz, (B)uzz, (FB) or (N)one?\n>: ")
+# 	if num % 3 == 0 and enter == "F":
+# 		continue
+# 	elif num % 5 == 0 and enter == "B":
+# 		continue
+# 	elif num % 3 == 0 and num % 5 == 0 and enter == "FB":
+# 		continue
+# 	else:
+# 		if enter == "N":
+# 			continue
+# 		else:
+# 			print("You lose!")
+# 			break
+# print("You win!!!")
+
+# # Task 73.
+# text = input("Enter text: ")
+# x = int(input("Enter num: "))
+# result = ''
+# for letter in text:
+# 	result += chr(ord(letter) - x)
+# print(result)
+
+# # Task 74. Skip
+# from numpy import mean
+#
+# x = int(input("Enter x: "))
+# guess = x / 2
+# while str(guess)[-1] != "0":
+# 	guess = mean([guess, x / guess])
+# print(guess)
+
+# # Task 75.
+# word = input("Enter word: ")
+# x = 0
+# y = -1
+# pallindrome = True
+# if len(word) % 2 == 0:
+# 	for _ in range(int(len(word)/2)):
+# 		if word[x] == word[y]:
+# 			x += 1
+# 			y -= 1
+# 		else:
+# 			pallindrome = False
+# 			break
+# else:
+# 	for _ in range(int((len(word)/2)-1)):
+# 		if word[x] == word[y]:
+# 			x += 1
+# 			y -= 1
+# 		else:
+# 			pallindrome = False
+# 			break
+# print(f"{word} is pallindrome") if pallindrome is True else print(f"{word} is not pallindrome")
+
+# # Task 76.
+# text = input("Enter text: ")
+# sample = text.replace(' ', '')
+# x = 0
+# y = -1
+# palindrome = True
+# if len(sample) % 2 == 0:
+# 	for _ in range(int(len(sample)/2)):
+# 		if sample[x] == sample[y]:
+# 			x += 1
+# 			y -= 1
+# 		else:
+# 			palindrome = False
+# 			break
+# else:
+# 	for _ in range(int((len(sample)/2)-1)):
+# 		if sample[x] == sample[y]:
+# 			x += 1
+# 			y -= 1
+# 		else:
+# 			palindrome = False
+# 			break
+# print(f"{text} is palindrome") if palindrome is True else print(f"{text} is not palindrome")
+
+# # Task 77.
+# matrix = [
+# 	[1, ],
+# 	[2, ],
+# 	[3, ],
+# 	[4, ],
+# 	[5, ],
+# 	[6, ],
+# 	[7, ],
+# 	[8, ],
+# 	[9, ],
+# 	[10, ]
+# ]
+# for row in range(0, 10):  # Формирую
+# 	for x in range(1, 11):
+# 		matrix[row].append(x * matrix[row][0])
+# for row in range(len(matrix)):  # Форматирую
+# 	for x in range(len(matrix[row])):
+# 		if len(str(matrix[row][x])) == 1:
+# 			matrix[row][x] = f'0{matrix[row][x]}'
+# matrix[0][0] = '  '
+# for row in matrix:  # Вывожу
+# 	print(*row)
+
+# # Task 78.
+# import math
+#
+# enter = int(input("Enter positive num: "))
+# lst = [enter, ]
+# while lst[-1] != 1:
+# 	if lst[-1] % 2 == 0:
+# 		lst.append(math.ceil(lst[-1]/2))
+# 	else:
+# 		lst.append(lst[-1]*3+1)
+# print(lst)
+
+# # Task 79.
+# m = int(input("Enter m: "))
+# n = int(input("Enter n: "))
+# d = m if m > n else n
+# while n % d != 0 or m % d != 0:
+# 	d -= 1
+# print(d)
+
+# # Task 80.
+# from math import ceil
+# n = int(input("Enter n (2 or more): "))
+# result = []
+# factor = 2
+# while factor <= n:
+# 	if n % factor == 0:
+# 		result.append(factor)
+# 		n = ceil(n / factor)
+# 	else:
+# 		factor += 1
+# print(result)
+
+# # Task 81.
+# enter = input("Enter num: ")
+# print(int(enter, 2))
+#
+# # Task 82.
+# enter = int(input("Enter num: "))
+# print(bin(enter))
+
+# # Task 83.
+# import random
+# array = [random.randint(1, 100) for _ in range(0, 101)]
+# max_array = 0
+# count = 0
+# for x in array:
+# 	if x > max_array:
+# 		max_array = x
+# 		count += 1
+# 		print(x, "<== Обновление")
+# 	else:
+# 		print(x)
+# print(f"Максимальное число: {max_array}\nКоличество смен: {count}")
+
+# # Task 84.
+# from random import randint
+# count = 0
+# lst = [0, 0, 0]
+# while lst[-1:-4:-1] != [1, 1, 1]:
+# 	lst.append(randint(0, 1))
+# 	count += 1
+# print(lst[3:])
+# print(count)
